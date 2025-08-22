@@ -1,4 +1,11 @@
-Code Architecture Problem
+## Setup
+
+npx create-turbo@latest
+
+
+
+
+## Code Architecture Problem
 
 Your team wants to build a simple Task Manager app in a Turborepo monorepo. The project should include:
 
