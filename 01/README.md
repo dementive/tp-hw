@@ -8,6 +8,14 @@ npm install typescript ts-node nodemailer @types/node @types/nodemailer
 npx tsc --init
 ```
 
+# Usage
+
+To run the project use:
+
+```bash
+npx ts-node src/index.ts
+```
+
 I implemented the real email notifications using [nodemailer](https://nodemailer.com/) but it requires setting up a gmail account to properly test it. See `src/notifications/email.ts` for more details.
 
 # Scenario

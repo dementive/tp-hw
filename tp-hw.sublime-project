@@ -1,0 +1,22 @@
+{
+	"folders":
+	[
+		{
+			"path": "."
+		}
+	],
+
+	// https://code.visualstudio.com/docs/typescript/typescript-debugging
+	// https://medium.com/@matteoluigitommasi/setup-the-vscode-debugger-for-a-nodejs-typescript-project-a9c0a5042687
+	"debugger_configurations": [
+		{
+			"name": "Notifications Debug",
+			"type": "node",
+			"request": "launch",
+			"cwd": "${project_path}/01",
+			"program": "${project_path}/01/src/index.ts",
+			"preLaunchTask": "tsc: build - tsconfig.json",
+			"outFiles": ["${project_path}/01/build/**/*.js"]
+		},
+	]
+}
