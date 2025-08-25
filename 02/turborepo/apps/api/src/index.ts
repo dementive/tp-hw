@@ -1,24 +1,23 @@
 import express from 'express';
-import cors from 'cors';
 import type { Task } from 'types';
 
 const app = express();
 const PORT = process.env.PORT || 3001;
 
-app.use(cors());
 app.use(express.json());
 
-let tasks: Task[] = [];
+let tasks: Task[] = [
+  { id: 0, title: 'Learn Everything' },
+];
 
 app.get('/tasks', (req, res) => {
   res.json(tasks);
 });
 
 app.post("/tasks", (req, res) => {
-  console.log("Adding task...");
   const newTask: Task = { id: tasks.length, ...req.body };
   tasks.push(newTask);
-  console.log(tasks);
+  res.status(200).send('Successfully pushed task.');
 });
 
 app.listen(PORT, () => {
